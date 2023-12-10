@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSocket Example</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="btn_div">
+      <button
+        onclick="send_on()"
+        ;
+        type="button"
+        value="Отправить"
+        id="elem"
+        class="btn btn-outline-primary"
+      >
+        Включить
+      </button>
+      <button
+        onclick="send_off()"
+        id="elem"
+        type="button"
+        class="btn btn-outline-secondary"
+      >
+        Выключить
+      </button>
+      <button
+        onclick="send_status()"
+        type="button"
+        class="btn btn-outline-success"
+      >
+        Получить статус
+      </button>
+      <p id="mySpan" style="margin-top: 50px"></p>
+      <div id="subscribe-container" style="font-size: 20px"></div>
+    </div>
+
+    <script>
+      const socket = new WebSocket("ws://localhost:8000");
+
+      socket.onopen = () => {
+        console.log("Connected to server");
+      };
+
+      // обработчик входящих сообщений
+      socket.onmessage = function (event) {
+        var incomingMessage = event.data;
+        showMessage(incomingMessage);
+      };
+
+      // показать сообщение в div#subscribe
+      function showMessage(message) {
+        var messageElem = document.createElement("div");
+        messageElem.appendChild(document.createTextNode(message));
+        var subscribeElem = document.getElementById("subscribe-container");
+
+        if (subscribeElem) {
+          // Check if the element exists
+          // Generate a random color for the message
+          var randomColor =
+            "#" + Math.floor(Math.random() * 16777215).toString(16);
+          messageElem.style.color = randomColor;
+
+          // Check if the new message is the same as the last message
+          if (
+            subscribeElem.firstChild &&
+            subscribeElem.firstChild.textContent === message
+          ) {
+            return; // Ignore the message if it's the same as the last one
+          }
+
+          subscribeElem.insertBefore(messageElem, subscribeElem.firstChild);
+
+          if (subscribeElem.children.length > 10) {
+            subscribeElem.removeChild(subscribeElem.lastChild);
+          }
+        }
+      }
+
+      function send_on() {
+        socket.send(
+          JSON.stringify({ task_name: "command", task_for_devise: "0x01" })
+        );
+      }
+      function send_off() {
+        socket.send(
+          JSON.stringify({
+            task_name: "command",
+            task_for_devise: "0x02",
+          })
+        );
+      }
+      function send_status() {
+        socket.send(
+          JSON.stringify({
+            task_name: "command",
+            task_for_devise: "0x03",
+          })
+        );
+      }
+    </script>
+  </body>
+</html>
+<style>
+  .btn_div {
+    margin-top: 200px;
+    text-align: center;
+  }
+</style>
