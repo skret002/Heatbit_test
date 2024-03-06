@@ -110,3 +110,119 @@
 2023-12-11 00:30:27 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 110'}
 2023-12-11 00:30:27 | INFO | Отправляем код ответа в бд, код-0x02 110
 2023-12-11 00:30:27 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 150', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:30:17.681977'}
+2023-12-11 00:30:37 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 151'}
+2023-12-11 00:30:37 | INFO | Отправляем код ответа в бд, код-0x02 151
+2023-12-11 00:30:37 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 110', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:30:27.683540'}
+2023-12-11 00:30:47 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 64'}
+2023-12-11 00:30:47 | INFO | Отправляем код ответа в бд, код-0x02 64
+2023-12-11 00:30:47 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 151', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:30:37.685154'}
+2023-12-11 00:30:57 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 210'}
+2023-12-11 00:30:57 | INFO | Отправляем код ответа в бд, код-0x02 210
+2023-12-11 00:30:57 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 64', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:30:47.686627'}
+2023-12-11 00:31:07 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 31'}
+2023-12-11 00:31:07 | INFO | Отправляем код ответа в бд, код-0x02 31
+2023-12-11 00:31:07 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 210', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:30:57.688575'}
+2023-12-11 00:31:17 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 31'}
+2023-12-11 00:31:17 | INFO | Отправляем код ответа в бд, код-0x02 31
+2023-12-11 00:31:17 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 31', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:31:07.690216'}
+2023-12-11 00:31:27 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 183'}
+2023-12-11 00:31:27 | INFO | Отправляем код ответа в бд, код-0x02 183
+2023-12-11 00:31:27 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 31', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:31:07.690216'}
+2023-12-11 00:31:37 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 34'}
+2023-12-11 00:31:37 | INFO | Отправляем код ответа в бд, код-0x02 34
+2023-12-11 00:31:37 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 183', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:31:27.693486'}
+2023-12-11 00:31:47 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 10'}
+2023-12-11 00:31:47 | INFO | Отправляем код ответа в бд, код-0x02 10
+2023-12-11 00:31:47 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 34', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:31:37.695453'}
+2023-12-11 00:31:57 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 29'}
+2023-12-11 00:31:57 | INFO | Отправляем код ответа в бд, код-0x02 29
+2023-12-11 00:31:57 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 10', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:31:47.697028'}
+2023-12-11 00:32:07 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 23'}
+2023-12-11 00:32:07 | INFO | Отправляем код ответа в бд, код-0x02 23
+2023-12-11 00:32:07 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 29', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:31:57.698720'}
+2023-12-11 00:32:17 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 184'}
+2023-12-11 00:32:17 | INFO | Отправляем код ответа в бд, код-0x02 184
+2023-12-11 00:32:17 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 23', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:32:07.700308'}
+2023-12-11 00:32:27 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 48'}
+2023-12-11 00:32:27 | INFO | Отправляем код ответа в бд, код-0x02 48
+2023-12-11 00:32:27 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 184', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:32:17.702055'}
+2023-12-11 00:32:37 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 59'}
+2023-12-11 00:32:37 | INFO | Отправляем код ответа в бд, код-0x02 59
+2023-12-11 00:32:37 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 48', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:32:27.703527'}
+2023-12-11 00:32:47 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 45'}
+2023-12-11 00:32:47 | INFO | Отправляем код ответа в бд, код-0x02 45
+2023-12-11 00:32:47 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 59', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:32:37.705185'}
+2023-12-11 00:32:57 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 61'}
+2023-12-11 00:32:57 | INFO | Отправляем код ответа в бд, код-0x02 61
+2023-12-11 00:32:57 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 45', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:32:47.706757'}
+2023-12-11 00:33:07 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 193'}
+2023-12-11 00:33:07 | INFO | Отправляем код ответа в бд, код-0x02 193
+2023-12-11 00:33:07 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 61', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:32:57.708488'}
+2023-12-11 00:33:17 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 149'}
+2023-12-11 00:33:17 | INFO | Отправляем код ответа в бд, код-0x02 149
+2023-12-11 00:33:17 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 193', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:33:07.710189'}
+2023-12-11 00:33:27 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 140'}
+2023-12-11 00:33:27 | INFO | Отправляем код ответа в бд, код-0x02 140
+2023-12-11 00:33:27 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 149', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:33:17.711823'}
+2023-12-11 00:33:37 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 236'}
+2023-12-11 00:33:37 | INFO | Отправляем код ответа в бд, код-0x02 236
+2023-12-11 00:33:37 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 140', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:33:27.713381'}
+2023-12-11 00:33:47 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 229'}
+2023-12-11 00:33:47 | INFO | Отправляем код ответа в бд, код-0x02 229
+2023-12-11 00:33:47 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 236', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:33:37.714812'}
+2023-12-11 00:33:57 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 161'}
+2023-12-11 00:33:57 | INFO | Отправляем код ответа в бд, код-0x02 161
+2023-12-11 00:33:57 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 229', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:33:47.716678'}
+2023-12-11 00:34:07 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 194'}
+2023-12-11 00:34:07 | INFO | Отправляем код ответа в бд, код-0x02 194
+2023-12-11 00:34:07 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 161', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:33:57.718451'}
+2023-12-11 00:34:17 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 135'}
+2023-12-11 00:34:17 | INFO | Отправляем код ответа в бд, код-0x02 135
+2023-12-11 00:34:17 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 194', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:34:07.720026'}
+2023-12-11 00:34:27 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 45'}
+2023-12-11 00:34:27 | INFO | Отправляем код ответа в бд, код-0x02 45
+2023-12-11 00:34:27 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 135', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:34:17.721736'}
+2023-12-11 00:34:37 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 172'}
+2023-12-11 00:34:37 | INFO | Отправляем код ответа в бд, код-0x02 172
+2023-12-11 00:34:37 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 45', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:34:27.723264'}
+2023-12-11 00:34:47 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 29'}
+2023-12-11 00:34:47 | INFO | Отправляем код ответа в бд, код-0x02 29
+2023-12-11 00:34:47 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 172', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:34:37.725122'}
+2023-12-11 00:34:57 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 21'}
+2023-12-11 00:34:57 | INFO | Отправляем код ответа в бд, код-0x02 21
+2023-12-11 00:34:57 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 29', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:34:47.727384'}
+2023-12-11 00:35:07 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 51'}
+2023-12-11 00:35:07 | INFO | Отправляем код ответа в бд, код-0x02 51
+2023-12-11 00:35:07 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 21', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:34:57.728835'}
+2023-12-11 00:35:17 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 28'}
+2023-12-11 00:35:17 | INFO | Отправляем код ответа в бд, код-0x02 28
+2023-12-11 00:35:17 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 51', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:35:07.730328'}
+2023-12-11 00:35:27 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 176'}
+2023-12-11 00:35:27 | INFO | Отправляем код ответа в бд, код-0x02 176
+2023-12-11 00:35:27 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 28', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:35:17.732028'}
+2023-12-11 00:35:37 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 8'}
+2023-12-11 00:35:37 | INFO | Отправляем код ответа в бд, код-0x02 8
+2023-12-11 00:35:37 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 176', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:35:27.733617'}
+2023-12-11 00:35:47 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 159'}
+2023-12-11 00:35:47 | INFO | Отправляем код ответа в бд, код-0x02 159
+2023-12-11 00:35:47 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 8', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:35:37.735317'}
+2023-12-11 00:35:57 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 30'}
+2023-12-11 00:35:57 | INFO | Отправляем код ответа в бд, код-0x02 30
+2023-12-11 00:35:57 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 159', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:35:47.736894'}
+2023-12-11 00:36:07 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 222'}
+2023-12-11 00:36:07 | INFO | Отправляем код ответа в бд, код-0x02 222
+2023-12-11 00:36:07 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 30', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:35:57.738688'}
+2023-12-11 00:36:17 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 14'}
+2023-12-11 00:36:17 | INFO | Отправляем код ответа в бд, код-0x02 14
+2023-12-11 00:36:17 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 222', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:36:07.740337'}
+2023-12-11 00:36:27 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 67'}
+2023-12-11 00:36:27 | INFO | Отправляем код ответа в бд, код-0x02 67
+2023-12-11 00:36:27 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 14', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:36:17.742192'}
+2023-12-11 00:36:37 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 88'}
+2023-12-11 00:36:37 | INFO | Отправляем код ответа в бд, код-0x02 88
+2023-12-11 00:36:37 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 67', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:36:27.743905'}
+2023-12-11 00:36:47 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 168'}
+2023-12-11 00:36:47 | INFO | Отправляем код ответа в бд, код-0x02 168
+2023-12-11 00:36:47 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 88', 'state': 'off', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2023-12-11T00:36:37.746754'}
+2024-03-02 17:26:14 | INFO | Запуск сервера на адресе ws://localhost:8000
+2024-03-02 17:27:33 | INFO | Запуск сервера на адресе ws://localhost:8000

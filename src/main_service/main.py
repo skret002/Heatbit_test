@@ -1,22 +1,27 @@
 """
 3. Управляющий сервис
-Хранит состояние в sqlite базе данных:
+Хранит состояние в  базе данных:
 Состояние вкл/выкл
 Статус (число)
 По каким-либо триггерам (для удобства тестирования), должен уметь отправить
 команду на включение или выключение устройства.
 """
-import sys
 import asyncio
 import contextlib
-import websockets
 import json
-from pydantic import BaseModel
+import sys
+
+import websockets
 from loguru import logger
+from pydantic import BaseModel
+
 sys.path.insert(1, '../')
 sys.path.insert(1, '../../')
 from sql.orm import ORM
+
 from src.settings import settings
+
+
 logger.add("main.log", rotation="50 MB", format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}")
 class TaskToJson(BaseModel):
     task_name: str
