@@ -8,27 +8,37 @@
 Пути к файлам input , output , настройки соединения WS необходимо хранить в файле
 конфигурации, но так же должна быть возможность переопределить через environment.
 """
-import sys
-from urllib import response
-sys.path.insert(1, '../')
-sys.path.insert(1, '../../')
 import json
-import time
+import os
+import sys
 import threading
+import time
+from enum import Enum
 from pathlib import Path
-from websockets.sync.client import connect
-from pydantic import BaseModel
+
 import websockets
-from device_emulator.main import Task
-from sql.orm import ORM
 from loguru import logger
-from src.settings import settings
+from pydantic import BaseModel
+from websockets.sync.client import connect
+
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(parent_dir)
+src_directory = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(src_directory)
+from device_emulator.main import Task  # noqa: E402
+from sql.orm import ORM  # noqa: E402
+from src.settings import settings  # noqa: E402
 
 logger.add("device.log", rotation="50 MB", format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}")
+class DeviceCommand(Enum):
+    ON = "0x01"
+    OFF = "0x02"
+    GET_STATUS = "0x03"
+
+
 class BridgeForDevice:
     def __init__(self, default_file_path):
         self.default_path = default_file_path
-        self.expected_answers = ['0x00', '0x01', '0x02']
         self.incoming_message = []
         self.last_update_status = time.time()
 
@@ -90,9 +100,9 @@ class BridgeForDeviceWithWebsocket(BridgeForDevice):
         with open(f'{path}/{name}', "wb") as f:
             pass
     def check_freelance_request_status(self, code: str, ws: websockets) -> bool:
-        if code == '0x03':
+        if code == DeviceCommand.GET_STATUS.value:
             self.clean_file(settings.file_inp_path,settings.file_inp_name) # очищаем старый ответ
-            self.transfer_command_to_device('0x03')
+            self.transfer_command_to_device(DeviceCommand.GET_STATUS.value)
             logger.info('Получены внештатный запрос состояния эмулятора')
             time.sleep(2)# даем время устройству на ответ
             status_dto=StatusDTO(**{'task_name': 'device_status_timeout10',

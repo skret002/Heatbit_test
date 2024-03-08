@@ -13,7 +13,7 @@
 0x01 - Ошибка выполнения команды
 0x02 {random_number} - Статус у
 """
-import sys,os
+import sys
 import time
 from random import randint
 from abc import ABC,abstractmethod
