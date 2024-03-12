@@ -471,3 +471,5 @@
 2024-03-08 18:45:48 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 175'}
 2024-03-08 18:45:48 | INFO | Отправляем код ответа в бд, код-0x02 175
 2024-03-08 18:45:48 | INFO | Отправляю данные на WEB {'id': 1, 'task_name': 'for_web', 'status': '0x02 114', 'state': 'on', 'created_at': '2023-12-10T23:42:19.080277', 'updated_at': '2024-03-08T18:45:38.305829'}
+2024-03-12 20:19:20 | INFO | Запуск сервера на адресе ws://localhost:8000
+2024-03-12 20:20:28 | INFO | Получено состояние эмулятора по таймауту {'sender_name': 'layer', 'task_name': 'device_status_timeout10', 'device_name': 'divice_1', 'response_code': '0x02 176'}

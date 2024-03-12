@@ -9,6 +9,7 @@
 import asyncio
 import contextlib
 import json
+import os
 import sys
 
 import websockets
@@ -16,14 +17,18 @@ from loguru import logger
 from pydantic import BaseModel
 
 sys.path.insert(1, '../')
-sys.path.insert(1, '../../')
 from enum import Enum
 
 from sql.orm import ORM
 
+parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(parent_dir)
+src_directory = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(src_directory)
+
 from src.settings import settings
 
-logger.add("main.log", rotation="50 MB", format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}")
+
 class TaskToJson(BaseModel):
     task_name: str
 
@@ -107,5 +112,8 @@ class WebSocketServer:
 
 
 if __name__ == "__main__":
+# Проверяем, существует ли файл
+    if not os.path.exists("../sql/user_db.db"):
+        ORM.create_tables()
     server = WebSocketServer()
     asyncio.run(server.main())
