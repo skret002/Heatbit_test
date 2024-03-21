@@ -36,6 +36,7 @@ share/python-wheels/
 **/*.log
 *.log
 *.cfg
+*.vscode
 MANIFEST
 
 # PyInstaller
