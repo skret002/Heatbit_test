@@ -23,12 +23,19 @@ var/
 wheels/
 bin/
 include/
+src/__pycache__/
+src/service_layer/__pycache__/
+src/main_service/__pycache__/
+src/sql/__pycache__/
 venv/
 .lprof
 share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+**/*.log
+*.log
+*.cfg
 MANIFEST
 
 # PyInstaller
