@@ -13,17 +13,13 @@
 ## Запуск сервисов
 
 1. Управляющий сервис:
-   ```python python3 src/main_service/main.py
+   `python python3 src/main_service/main.py`
 
-   ```
 2. Сервис(2):
-   ```python python3 src/service_layer/main.py
+   `python python3 src/service_layer/main.p`y
 
-   ```
 3. Эмулятор устройства:
-   ```python python3 src/device_emulator/main.py
-
-   ```
+   `python python3 src/device_emulator/main.py`
 
 ## Тригеры и вывод данных
 
