@@ -15,12 +15,13 @@
 """
 import sys
 import time
+from abc import ABC, abstractmethod
 from random import randint
-from abc import ABC,abstractmethod
+
 from loguru import logger
+
 sys.path.insert(1, '../../')
 from src.settings import settings
-
 
 logger.add("device.log", rotation="50 MB", format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}")
 """
@@ -67,9 +68,11 @@ def clean_file(path: str, name: str):
     with open(f'{path}/{name}', "wb") as f:
         pass
 
-def read_input_file(path: str, name: str) -> str or None:
+
+def read_input_file(path: str, name: str) -> str | None:
     with open(f'{path}/{name}', "r") as f:
         return f.read()
+
 
 def write_info(path: str, name: str, info: str) ->None:
     print('Путь',f'{path}/{name}',info)

@@ -11,21 +11,18 @@ import contextlib
 import json
 import os
 import sys
+from enum import Enum
 
 import websockets
 from loguru import logger
 from pydantic import BaseModel
 
-sys.path.insert(1, '../')
-from enum import Enum
-
-from sql.orm import ORM
-
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(parent_dir)
 src_directory = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(src_directory)
-
+from sql.alternative_style_orm import ORM
+#from sql.orm import ORM
 from src.settings import settings
 
 
@@ -71,8 +68,12 @@ class WebSocketServer:
         self.handler_task = HandlerTask()
         self.handler_task.set_server(self)
 
-    async def get_message(self, websocket: websockets):
-        return await websocket.recv()
+    async def get_message(self, websocket):
+        try:
+            return await websocket.recv()
+        except websockets.exceptions.ConnectionClosed:
+            logger.error('websockets.exceptions.ConnectionClosed')
+            return None
 
     async def convert_json_to_dict(self, message: str) -> dict:
         try:
@@ -84,10 +85,13 @@ class WebSocketServer:
     async def broker(self, websocket: websockets) -> None:
         while True:
             self.client_list.append(websocket)
-            message = await self.get_message(websocket)
-            check_message = await self.convert_json_to_dict(message)
-            await self.handler_task.handler_task(self.button, check_message)
-
+            try:
+                message = await self.get_message(websocket)
+                check_message = await self.convert_json_to_dict(message)
+                await self.handler_task.handler_task(self.button, check_message)
+            except (websockets.exceptions.ConnectionClosed, TypeError) as e:
+                logger.error(f'websockets.exceptions.ConnectionClosed -  {e}')
+                self.client_list.remove(websocket)
     async def broadcast(self, message: str):
         for client in self.client_list:
             if client.open:
@@ -112,8 +116,5 @@ class WebSocketServer:
 
 
 if __name__ == "__main__":
-# Проверяем, существует ли файл
-    if not os.path.exists("../sql/user_db.db"):
-        ORM.create_tables()
     server = WebSocketServer()
     asyncio.run(server.main())

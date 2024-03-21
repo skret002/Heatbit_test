@@ -26,7 +26,8 @@ sys.path.append(parent_dir)
 src_directory = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(src_directory)
 from device_emulator.main import Task  # noqa: E402
-from sql.orm import ORM  # noqa: E402
+from sql.alternative_style_orm import ORM  # noqa: E402
+#from sql.orm import ORM
 from src.settings import settings  # noqa: E402
 
 logger.add("device.log", rotation="50 MB", format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}")
@@ -90,14 +91,16 @@ class BridgeForDeviceWithWebsocket(BridgeForDevice):
         return self.transfer_respons_from_device()
 
     def push_sql_data_to_web(self, ws: websockets):
-        if data := ORM.convert_device_data_to_dto():
-            logger.info(f'Получены данные для web - {data}')
-            ws.send(data)
-        else:
-            logger.error('Ошибка получения данный в валидаторе ORM.convert_device_data_to_dto()')
+        try:
+            if data := ORM.convert_device_data_to_dto():
+                logger.info(f'Получены данные для web - {data}')
+                ws.send(data)
+        except AttributeError as e:
+            logger.error(f'Ошибка получения данных для web - {e}')
+
     @staticmethod
     def clean_file(path: str, name: str):
-        with open(f'{path}/{name}', "wb") as f:
+        with open(f'{path}/{name}', "wb"):
             pass
     def check_freelance_request_status(self, code: str, ws: websockets) -> bool:
         if code == DeviceCommand.GET_STATUS.value:
@@ -117,7 +120,7 @@ class BridgeForDeviceWithWebsocket(BridgeForDevice):
             if time.time() - self.last_update_status >= 10:
                 response_status = self.check_device_status()
                 ws.send(response_status)
-                self.push_sql_data_to_web(ws)  # Push data from the database to the web every 10 seconds for convenience
+                self.push_sql_data_to_web(ws)
                 self.last_update_status = time.time()
                 logger.info(f'Прошло 10сек, отправляю в main сервис данные - {response_status}')
             if len(self.incoming_message) > 0:
@@ -159,6 +162,10 @@ class BridgeForDeviceWithWebsocket(BridgeForDevice):
 if __name__ == '__main__':
     logger.info(f'Запуск клиента на адресе {f"ws://{settings.ws_host}:{settings.ws_port}"}')
     default_path = Path(__file__).parent.parent.parent
-    with connect(f"ws://{settings.ws_host}:{settings.ws_port}") as ws:
-        device_manager = BridgeForDeviceWithWebsocket(default_path)
-        device_manager.start(ws)
+    while True:
+        try:
+            with connect(f"ws://{settings.ws_host}:{settings.ws_port}") as ws:
+                device_manager = BridgeForDeviceWithWebsocket(default_path)
+                device_manager.start(ws)
+        except (ConnectionRefusedError, TypeError) as e:
+            logger.error(f"Ошибка соеденения - {e}")
