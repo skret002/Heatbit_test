@@ -19,6 +19,10 @@ class ServiceOption:
     file_output_path: str
     status_command: dict
     task_command: dict
+    db_connect: str
+    db_path: str
+
+
 """
 Пути к файлам input , output  - лежат в отдельном settings в эмуляторе, который принимает их из .env
 В данном settings, только настройки ws.
@@ -34,7 +38,9 @@ def get_settings():
         file_inp_path = os.getenv('FILE_INPUT_PATH') or  default_path,
         file_output_path = os.getenv('FILE_OUTPUT_PATH') or  default_path,
         status_command = {'success':'0x00','error':'0x01','status':'0x02'},
-        task_command = {'0x01':'devise_on', '0x02':'devise_off' , '0x03':'devise_status' }
+        task_command = {'0x01':'devise_on', '0x02':'devise_off' , '0x03':'devise_status' },
+        db_connect = os.getenv('DB_CONNECT'),
+        db_path = os.getenv('DB_PATH'),
     )
 settings=get_settings()
 

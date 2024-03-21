@@ -8,11 +8,13 @@ from pydantic import BaseModel
 from sqlalchemy import Column, DateTime, Enum, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+from src.settings import settings
 project_root = Path(__file__).parent.parent.parent
-db_path = f"{project_root}/src/sql/user_db.db"
+db_path = f"{project_root}{settings.db_path}"
 
-engine = create_engine(f"sqlite:///{db_path}", echo=True)
+# Создание строки подключения, используя абсолютный путь
+engine = create_engine(f"{settings.db_connect}{db_path}", echo=True)
+Base = declarative_base()
 
 
 class StateDevice(enum.Enum):
